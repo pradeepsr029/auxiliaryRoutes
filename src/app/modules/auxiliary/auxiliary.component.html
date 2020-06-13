@@ -1,0 +1,32 @@
+<div class="cdk-overlay-container">
+    <div class="overlay-backdrop" (click)="closePopup()"></div>
+    <div class="global-overlay-wrapper">
+        <div class="cdk-overlay-pane">
+            <div class="dialog-container">
+                <main class="inner-body">
+                    <div class="left-panel">
+                        <ul>
+                            <li [routerLink]="['', { outlets: { auxName: ['aux'] } }]" [skipLocationChange]="skipUrl"
+                                [routerLinkActiveOptions]="{exact:
+                                true}" routerLinkActive="active">
+                                Edit Profile
+                            </li>
+
+                            <li [routerLink]="['', { outlets: { auxName: ['aux' ,'change-password'] } }]"
+                                [skipLocationChange]="skipUrl" routerLinkActive="active">
+                                Change Password
+                            </li>
+                            <li [routerLink]="['', { outlets: { auxName: ['aux','activity'] } }]"
+                                [skipLocationChange]="skipUrl" routerLinkActive="active">
+                                Login Activity
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="route-panel">
+                        <router-outlet></router-outlet>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.bgImg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("../../../assets/insta.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+
+header {
+    height: 53px;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    div {
+        width: 100%;
+        text-align: right;
+        padding: 0 20%;
+        button {
+            outline: none;
+            border: none;
+            padding: 10px;
+            border-radius: 40px;
+            background: #e72d39;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}

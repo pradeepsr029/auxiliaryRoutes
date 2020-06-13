@@ -1,0 +1,95 @@
+.cdk-overlay-container {
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    .overlay-backdrop {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        pointer-events: auto;
+        background: rgba(0, 0, 0, 0.32);
+    }
+}
+
+.global-overlay-wrapper {
+    justify-content: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    .cdk-overlay-pane {
+        pointer-events: auto;
+        box-sizing: border-box;
+        width: 60%;
+        position: static;
+        display: flex;
+        z-index: 1000;
+        .dialog-container {
+            display: block;
+            // padding: 24px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            overflow: auto;
+            outline: 0;
+            width: 100%;
+            height: 100%;
+            min-height: inherit;
+            max-height: inherit;
+            box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+                0 9px 46px 8px rgba(0, 0, 0, 0.12);
+            background: #fff;
+            color: rgba(0, 0, 0, 0.87);
+        }
+    }
+}
+
+.inner-body {
+    display: flex;
+    align-items: stretch;
+    flex: 1 1 auto;
+    height: 70vh;
+    width: 100%;
+    .left-panel {
+        flex: 0 0 auto;
+        width: 250px;
+        border-right: 1px solid #e3e3e3;
+        li {
+            padding: 20px;
+            font-family: sans-serif;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            outline: none;
+        }
+        li:hover {
+            background-color: #fafafa;
+            border-color: #dbdbdb;
+        }
+        .active {
+            border-color: #2a2a2a !important;
+        }
+    }
+    .route-panel {
+        flex: 1 1 auto;
+        padding: 20px;
+    }
+}
+
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
